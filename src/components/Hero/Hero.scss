@@ -1,0 +1,82 @@
+@use "@/scss/util/mixins/fluid-sizing" as fluid;
+
+.hero {
+	--header-height: max(40vh, 400px);
+
+	position: relative;
+	height: var(--header-height);
+	background-color: var(--grey-12);
+
+	&__image,
+	&__content {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: var(--header-height);
+	}
+
+	&__image {
+		grid-column: 1 / -1 !important;
+		opacity: 0.65;
+		object-fit: cover;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: var(--space-5);
+
+		color: white;
+	}
+
+	&__heading {
+		text-wrap: balance;
+	}
+
+	&__subheading {
+		@include fluid.typography(5, 6);
+		font-weight: var(--fw-light);
+	}
+
+	&__cta {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+
+		padding: var(--space-2) var(--space-4);
+
+		border-style: solid;
+		border-width: 2px;
+		border-color: white;
+		border-radius: var(--radius-1);
+
+		font-weight: var(--fw-bold);
+		text-transform: uppercase;
+
+		color: white;
+		background-color: var(--grey-a6);
+
+		transition-property: color, background-color;
+		transition-duration: 1200ms;
+
+		&::after {
+			content: "➞";
+			width: 20px;
+			transition-property: transform;
+			transition-duration: 1600ms;
+		}
+
+		&:hover {
+			color: black;
+			background-color: white;
+			transition-duration: 400ms;
+		}
+
+		&:hover::after {
+			transform: translateX(8px);
+			transition-duration: 800ms;
+		}
+	}
+}

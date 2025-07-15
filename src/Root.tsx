@@ -6,7 +6,7 @@ const App = () => {
 	return (
 		<>
 			<Header />
-			<main className="fb-col-wrapper">
+			<main>
 				<Outlet />
 			</main>
 		</>
