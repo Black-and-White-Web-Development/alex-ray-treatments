@@ -4,18 +4,19 @@
 	position: fixed;
 	top: 0;
 	z-index: 1;
-
-  justify-items: flex-end;
-  justify-content: flex-end;
-
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
 	width: 100%;
 
-	background-color: var(--background-2);
-	border-bottom-color: var(--border-1);
+  padding-block: var(--space-3);
+  background-image: linear-gradient(0deg, transparent 10%, var(--grey-a10) 90%);
 
-  @include u.breakpoint-down(phone-landscape) {
+  &__content {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 48px;
+    height: 48px;
   }
 }
