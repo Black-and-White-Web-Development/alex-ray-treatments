@@ -2,6 +2,8 @@
 
 .nav-dialog {
 	&__action {
+    display: block;
+
 		border: none;
     background-color: transparent;
 
@@ -21,22 +23,40 @@
 
 		height: 100%;
 		width: 100%;
-		background-color: var(--grey-a12);
-		opacity: 0.2;
+
+		background-color: var(--grey-a3);
+    backdrop-filter: blur(3px);
+
+    &[data-state="open"] {
+			animation: fadeIn 1600ms ease;
+		}
+
+		&[data-state="closed"] {
+			animation: fadeOut 400ms ease;
+		}
 	}
 
-	&__header {
-		display: flex;
-		justify-content: flex-end;
-	}
+  &__header {
+    padding-block: var(--space-5);
+    justify-items: flex-end;
+  }
 
 	&__content {
 		position: fixed;
-		top: 0;
+    inset: 0 0 auto auto;
 		z-index: 1;
 
 		height: 100%;
-		z-index: 1;
-		background-color: var(--background-2);
+
+		background-color: hsl(265 0% 14%);
+    box-shadow: var(--shadow-3);
+
+    &[data-state="open"] {
+      animation: enterFromRight 300ms ease;
+		}
+
+		&[data-state="closed"] {
+      animation: exitToRight 300ms ease;
+		}
 	}
 }
