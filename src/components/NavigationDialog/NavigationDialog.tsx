@@ -30,7 +30,7 @@ const NavigationDialog = function () {
 				<Dialog.Portal>
 					<Dialog.Overlay className="nav-dialog__overlay" />
 					<Dialog.Content className="nav-dialog__content">
-						<header className="nav-dialog__header">
+						<header className="nav-dialog__header fb-col-wrapper">
 							<Dialog.Close asChild>
 								<button
 									type="button"

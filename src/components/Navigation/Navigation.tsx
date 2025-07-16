@@ -3,7 +3,6 @@ import { NavigationMenu } from "radix-ui";
 
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
-import NavDropdown from "./NavDropdown";
 import NavItem from "./NavItem";
 import "./Navigation.scss";
 
@@ -15,13 +14,8 @@ const Navigation = function () {
 			<NavigationMenu.List className="nav__list">
 				<NavItem to="/" name="Home" />
 				<NavItem to="/about" name="About" />
-				<NavDropdown name="Services">
-					<NavItem to="/services/planning" name="Planning" />
-					<NavItem to="/services/development" name="Development" />
-					<NavItem to="/services/review" name="Review" />
-				</NavDropdown>
-				<NavItem to="/blog" name="Blog" />
-				<NavItem to="/contact" name="Contact" />
+				<NavItem to="/treatments" name="Treatments" />
+				<NavItem isCta={true} to="/book" name="Book a treament" />
 			</NavigationMenu.List>
 		</NavigationMenu.Root>
 	);
