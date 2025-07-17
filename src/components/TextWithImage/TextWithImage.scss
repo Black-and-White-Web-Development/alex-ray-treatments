@@ -1,0 +1,34 @@
+@use "@/scss/util" as u;
+
+.text-with-image {
+	display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+	margin-block: var(--space-6);
+
+  &--right {
+    flex-direction: row-reverse;
+  }
+
+  @include u.breakpoint-down(phone-landscape) {
+    flex-direction: column-reverse;
+  }
+
+  &__image {
+    flex: 1;
+    border-radius: var(--radius-4);
+
+    @include u.breakpoint(tablet) {
+      height: 0;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+	&__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+		gap: var(--space-2);
+	}
+}
