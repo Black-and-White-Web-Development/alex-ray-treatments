@@ -1,18 +1,10 @@
-import Hero from "@/components/Hero";
 import TextWithImage from "@/components/TextWithImage";
 
 import portrait from "@/assets/alex-ray.webp";
-import heroBackground from "@/assets/fields.webp";
 
 const Home = function () {
 	return (
 		<>
-			<Hero
-				heading="Alex Ray Treatments"
-				subheading="Wellness and beauty treatments from a cosy boutique salon in the Chichester countryside."
-				cta={{ href: "/contact", label: "Book now" }}
-				image={heroBackground}
-			/>
 			<TextWithImage
 				position="right"
 				image={{ url: portrait, alt: "Alex Ray" }}

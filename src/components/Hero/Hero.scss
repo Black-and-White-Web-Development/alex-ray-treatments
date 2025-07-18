@@ -2,11 +2,18 @@
 @use "@/scss/util/mixins/fluid-sizing" as fluid;
 
 .hero {
-	--header-height: max(40vw, 500px);
+	--header-height: max(25vw, 100px);
+  
+  &--hero {
+    --header-height: max(40vw, 500px);
+  }
 
 	position: relative;
 	height: var(--header-height);
   background-color: hsl(265 0% 14%);
+
+  transition-property: height;
+  transition-duration: 800ms;
 
 	&__image,
 	&__content {
@@ -14,6 +21,9 @@
 		inset: 0;
 		width: 100%;
 		height: var(--header-height);
+
+    transition-property: height;
+    transition-duration: 800ms;
 	}
 
 	&__image {
@@ -28,7 +38,10 @@
 		justify-content: center;
 		align-items: flex-start;
 		gap: var(--space-5);
+    
 		color: white;
+
+    animation: fadeIn 0.5s ease-in-out;
 
     @include u.breakpoint(tablet) {
       max-width: 50%;
