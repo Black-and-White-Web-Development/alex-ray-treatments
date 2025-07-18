@@ -62,6 +62,10 @@
 	);
 }
 
+@mixin rem($property, $min, $max, $min-vw: 360, $max-vw: 1440) {
+  @include _fluid-property($property, "rem", $min, $max, $min-vw, $max-vw);
+}
+
 @mixin font-size($min-fs, $max-fs, $min-vw: 360, $max-vw: 1440) {
 	@include _fluid-property("font-size", "rem", $min-fs, $max-fs, $min-vw, $max-vw);
 }
