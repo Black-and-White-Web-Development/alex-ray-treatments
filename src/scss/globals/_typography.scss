@@ -2,18 +2,19 @@
 @use "@/scss/util/functions/get-typographic-values" as font;
 
 :root {
-	--sans-serif: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	--serif: serif;
+	--sans-serif: "Lato", sans-serif;
+	--serif: "Libre Baskerville", serif;
 
   --fw-light: 300;
   --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-bold: 700;
+  --fw-medium: 700;
+  --fw-bold: 900;
 
 	font-style: normal;
 	font-weight: 400;
 	font-optical-sizing: auto;
 	font-synthesis: none;
+  font-variation-settings: "wdth" 100;
 	text-rendering: optimizeLegibility;
 	line-height: 1.5;
 
@@ -28,13 +29,13 @@ body {
 
 h1 {
   @include fluid.typography(8, 9);
-  font-weight: var(--fw-bold)
+  font-weight: var(--fw-medium);
 }
 
 h2 {
   @include fluid.rem("margin-block-end", 6, 8);
   @include fluid.typography(6, 8);
-  font-weight: var(--fw-medium)
+  font-weight: var(--fw-medium);
 }
 
 h3 {
@@ -68,19 +69,20 @@ pre,
 q,
 span,
 strong {
-  @include fluid.typography(2, 3);
+  @include fluid.typography(3, 4);
 
   &.small {
     @include fluid.typography(1, 2);
   }
   
   &.large {
-    @include fluid.typography(3, 4);
+    @include fluid.typography(4, 5);
   }
 }
 
-small {
-  @include fluid.typography(1, 2);
+p {
+  font-family: var(--serif);
+  color: var(--text-2);
 }
 
 a {

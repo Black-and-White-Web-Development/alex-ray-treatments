@@ -2,7 +2,7 @@
 @use "@/scss/util/mixins/fluid-sizing" as fluid;
 
 .hero {
-	--header-height: max(25vw, 100px);
+	--header-height: max(25vw, 300px);
   
   &--hero {
     --header-height: max(40vw, 500px);
@@ -14,6 +14,14 @@
 
   transition-property: height;
   transition-duration: 800ms;
+
+  @include u.breakpoint(tablet) {
+    --header-height: max(25vw, 400px);
+    
+    &--hero {
+      --header-height: max(40vw, 600px);
+    }   
+  }
 
 	&__image,
 	&__content {
@@ -37,8 +45,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		gap: var(--space-5);
-    
+		gap: var(--space-6);
+
 		color: white;
 
     animation: fadeIn 0.5s ease-in-out;
@@ -50,7 +58,8 @@
 
   &__heading,
   &__subheading {
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 3px hsl(0 0% 0% / 0.5);
+    color: white;
   }
 
 	&__heading {
@@ -58,8 +67,9 @@
 	}
 
 	&__subheading {
-		@include fluid.typography(5, 6);
-		font-weight: var(--fw-light);
+		@include fluid.typography(4, 6);
+		font-weight: var(--fw-normal);
+    text-wrap: balance;
 	}
 
 	&__cta {
@@ -67,24 +77,25 @@
 		align-items: center;
 		gap: var(--space-2);
 
-		padding: var(--space-2) var(--space-4);
+		padding: var(--space-3) var(--space-5);
 
 		border-style: solid;
-		border-width: 2px;
+		border-width: 1px;
 		border-color: white;
 		border-radius: var(--radius-1);
 
-		font-weight: var(--fw-bold);
+    @include fluid.typography(3, 5);
+		font-weight: var(--fw-normal);
 		text-transform: uppercase;
 
 		color: white;
-		background-color: var(--grey-a6);
+		background-color: var(--grey-a9);
 
 		transition-property: color, background-color;
 		transition-duration: 1200ms;
 
 		&::after {
-			content: "➞";
+			content: "⭢";
 			width: 20px;
 			transition-property: transform;
 			transition-duration: 1600ms;
