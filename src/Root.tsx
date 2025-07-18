@@ -17,7 +17,7 @@ const heroContent: Record<string, HeroProps> = {
 		heading: "Alex Ray Treatments",
 		subheading:
 			"Wellness and beauty treatments from a cosy boutique salon in the Chichester countryside.",
-		cta: { href: "/contact", label: "Book now" },
+		cta: { href: "/book", label: "Book now" },
 		image: background,
 	},
 	"/about": {

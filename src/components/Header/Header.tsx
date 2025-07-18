@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import Navigation from "@/components/Navigation";
@@ -12,7 +14,9 @@ const Header = function () {
 	return (
 		<header className="header fb-col-wrapper">
 			<div className="header__content">
-				<img className="header__logo" src={logo} alt="" width="48" height="48" />
+				<Link to="/">
+					<img className="header__logo" src={logo} alt="" width="48" height="48" />
+				</Link>
 				{isMobile ? <NavigationDialog /> : <Navigation />}
 			</div>
 		</header>
