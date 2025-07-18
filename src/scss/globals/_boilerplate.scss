@@ -31,3 +31,20 @@ img {
   width: 100%;
   height: auto;
 }
+
+
+section {
+  margin-block: var(--space-9);
+}
+
+
+.block {
+  margin-block: var(--space-8);
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+  &:last-child {
+    margin-block-end: 0;
+  }
+}

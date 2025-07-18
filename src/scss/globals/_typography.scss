@@ -32,6 +32,7 @@ h1 {
 }
 
 h2 {
+  @include fluid.rem("margin-block-end", 6, 8);
   @include fluid.typography(6, 8);
   font-weight: var(--fw-medium)
 }
