@@ -1,9 +1,13 @@
-import Text from "@/components/Text";
+import TextWithImage from "@/components/TextWithImage";
+
+import alexRayWorking from "@/assets/alex-ray-working.webp";
 
 const About = function () {
 	return (
 		<>
-			<Text
+			<TextWithImage
+				position="right"
+				image={{ url: alexRayWorking, alt: "Alex Ray" }}
 				heading="About Alex"
 				text={[
 					"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore praesentium deserunt quaerat quisquam sint quas officia, quo voluptates id exercitationem omnis esse? In sed provident neque eveniet accusantium quos ullam?",
