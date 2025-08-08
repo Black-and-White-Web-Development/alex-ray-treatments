@@ -1,0 +1,66 @@
+[
+	{
+		"id": 1,
+		"image": {
+			"url": "/images/back-massage.webp",
+			"alt": "Alex Ray performing a back massage, pressing firmly into the client's back while the client lies on a gray towel-covered massage table."
+		},
+		"heading": "Body Treatments",
+		"body": [
+			"I offer a menu of body treatments designed to help you relax and revive your skin, your body and your wellbeing. From full-body exfoliation to targeted sports massage, each treatment is tailored to you and your needs. If you're feeling sluggish, stressed or you need to recover after intense exercise - this to your space to pause and reset."
+		],
+		"treatments": [
+			{ "id": 1, "name": "Hot Stone Back Massage", "duration": 30, "price": 45 },
+			{ "id": 2, "name": "Hot Stone Full Body Massage", "duration": 60, "price": 75 },
+			{ "id": 3, "name": "Back Massage", "duration": 30, "price": 40 },
+			{ "id": 4, "name": "Leg Massage", "duration": 30, "price": 35 },
+			{ "id": 5, "name": "Full Body Massage", "duration": 50, "price": 60 },
+			{ "id": 6, "name": "Full Body Massage", "duration": 85, "price": 90 },
+			{ "id": 7, "name": "Head & Shoulders Massage", "duration": 30, "price": 40 },
+			{ "id": 8, "name": "Back Exfoliation", "duration": 30, "price": 25 },
+			{ "id": 9, "name": "Full Body Exfoliation", "duration": 50, "price": 35 }
+		]
+	},
+	{
+		"id": 2,
+		"image": {
+			"url": "/images/foot-massage.webp",
+			"alt": "Alex Ray performing a foot massage, with hands gently manipulating the client's foot."
+		},
+		"heading": "Hands and feet",
+		"body": [
+			"Your hands and feet work hard every day, and they deserve attention and care. I offer classic and gel manicures and pedicures with a focus on nail health, skin smoothing and perfectly neat finishes. Cuticle care, shaping, and massage are all included. I also offer reflexology sessions, using this ancient process to tap into your body's energy and restore balance. Whether it's regular upkeep or a special occasion treatment, your hands and feet leave our salon looking and feeling their best."
+		],
+		"treatments": [
+			{ "id": 1, "name": "Deluxe Manicure (included gel polish)", "duration": 60, "price": 40 },
+			{ "id": 2, "name": "Deluxe Pedicure (included gel polish)", "duration": 60, "price": 45 },
+			{ "id": 3, "name": "Express Manicure", "duration": 30, "price": 30 },
+			{ "id": 4, "name": "Express Pedicure", "duration": 30, "price": 35 },
+			{ "id": 5, "name": "File & Paint", "duration": 30, "price": 25 },
+			{ "id": 6, "name": "Cut & File", "duration": 30, "price": 20 },
+			{ "id": 7, "name": "Gel Nails Removal", "duration": 20, "price": 15 },
+			{ "id": 8, "name": "French Extra", "duration": 10, "price": 7 }
+		]
+	},
+	{
+		"id": 3,
+		"image": {
+			"url": "/images/facial-mask.webp",
+			"alt": "Alex Ray applying a white facial treatment mask with a brush to a client who is lying down with a white head wrap."
+		},
+		"heading": "Around the eyes",
+		"body": [
+			"I offer brow shaping, tinting and lash lifts to enhance your eyes and add natural-looking definition. It's ideal if you want to feel more polished with less makeup, and every treatment is tailored to your features, so the result feels effortless and flattering."
+		],
+		"treatments": [
+			{ "id": 1, "name": "Eyebrow Shape", "duration": 15, "price": 14 },
+			{ "id": 2, "name": "Eyebrow Tint", "duration": 15, "price": 14 },
+			{ "id": 3, "name": "Eyebrow Shape & Tint", "duration": 30, "price": 23 },
+			{ "id": 4, "name": "Eyelash Lift (includes tint)", "duration": 50, "price": 40 },
+			{ "id": 5, "name": "Eyelash Tint", "duration": 30, "price": 18 },
+			{ "id": 6, "name": "Eyelash & Eyebrow Tint", "duration": 30, "price": 23 },
+			{ "id": 7, "name": "Eyelash Tint & Eyebrow Shape", "duration": 30, "price": 26 },
+			{ "id": 8, "name": "Eyelash Tint & Eyebrow Shape and Tint", "duration": 30, "price": 30 }
+		]
+	}
+]
