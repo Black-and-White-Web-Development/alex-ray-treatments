@@ -10,7 +10,7 @@ const services = servicesData as ServiceType[];
 
 const Treatments = function () {
 	return (
-		<section className="treatments fb-col-wrapper">
+		<section className="treatments">
 			<ul className="treatments__list">
 				{services.map(service => (
 					<li key={service.id} className="treatments__list-item">
