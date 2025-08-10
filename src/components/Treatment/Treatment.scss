@@ -1,0 +1,67 @@
+@use "@/scss/util/mixins/fluid-sizing" as fluid;
+
+.treatment {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	padding: var(--space-4);
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--border-1);
+	border-radius: var(--radius-5);
+
+	background-color: var(--background-0);
+
+	transition-property: border-color, box-shadow;
+	transition-duration: 1200ms;
+
+	&:hover {
+		transition-duration: 400ms;
+		border-color: var(--solid-accent-1);
+		box-shadow: var(--shadow-2);
+	}
+
+	&__heading {
+		margin-block-end: var(--space-3);
+		padding-block-end: var(--space-3);
+
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color: var(--border-1);
+
+		@include fluid.typography(4, 5);
+		font-weight: var(--fw-normal);
+		line-height: 1;
+	}
+
+	&__description-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-6);
+	}
+
+	&__description-list-item {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+
+		line-height: 1;
+	}
+
+	&__term {
+		font-weight: var(--fw-light);
+		text-transform: uppercase;
+		color: var(--text-2);
+
+		&::after {
+			content: ":";
+		}
+	}
+
+	&__details {
+		text-wrap: balance;
+		color: var(--text-accent-2);
+	}
+}

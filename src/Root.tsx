@@ -1,5 +1,8 @@
+import type { ReactNode } from "react";
+
 import { Outlet, useLocation } from "react-router-dom";
 
+import BookingWidget from "@/components/BookingWidget";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
@@ -10,6 +13,7 @@ interface HeroProps {
 	subheading?: string;
 	image: string;
 	cta?: { href: string; label: string };
+	children?: ReactNode;
 }
 
 const heroContent: Record<string, HeroProps> = {
@@ -31,6 +35,7 @@ const heroContent: Record<string, HeroProps> = {
 	"/book": {
 		heading: "Book your treatment",
 		image: background,
+		children: <BookingWidget />,
 	},
 };
 
@@ -47,6 +52,7 @@ const App = () => {
 					subheading={content.subheading}
 					cta={content.cta}
 					image={content.image}
+					children={content.children}
 				/>
 				<Outlet />
 			</main>
