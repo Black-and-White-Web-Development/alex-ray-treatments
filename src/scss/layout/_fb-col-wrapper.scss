@@ -37,12 +37,36 @@
 	&__image {
 		grid-column: 1 / -1;
 
-		@include u.breakpoint(phone-landscape) {
+		@include u.breakpoint(tablet) {
 			grid-column: 5 / -1;
 		}
 
 		@include u.breakpoint(tablet) {
 			grid-column: 8 / -1;
+		}
+	}
+
+  &__content--reverse {
+		grid-column: 2 / -2;
+
+		@include u.breakpoint(tablet) {
+			grid-column: 8 / -2;
+		}
+
+		@include u.breakpoint(tablet) {
+			grid-column: 8 / -2;
+		}
+	}
+
+	&__image--reverse {
+		grid-column: 1 / -1;
+
+		@include u.breakpoint(tablet) {
+			grid-column: 2 / 5;
+		}
+
+		@include u.breakpoint(tablet) {
+			grid-column: 1 / 8;
 		}
 	}
 
