@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -8,19 +10,43 @@ interface HeroProps {
 	subheading?: string;
 	image: string;
 	cta?: { href: string; label: string };
+	children?: ReactNode;
 }
 
-const Hero = ({ heading, subheading, image, cta }: HeroProps) => {
+const Hero = ({ heading, subheading, image, cta, children }: HeroProps) => {
+	const isFullHeight = !!children;
+
 	return (
-		<header className={clsx("hero fb-col-wrapper", { "hero--hero": cta, "hero--banner": !cta })}>
+		<header
+			className={clsx("hero fb-col-wrapper", {
+				"hero--hero": cta,
+				"hero--banner": !cta,
+				"hero--full-height": isFullHeight,
+			})}
+		>
 			<img className="hero__image" src={image} alt="" />
 			<AnimatePresence mode="wait">
 				<motion.div
 					key={heading}
 					className="hero__content"
-					initial={{ opacity: 0, x: -20 }}
-					animate={{ opacity: 1, x: 0 }}
-					exit={{ opacity: 0, x: 10 }}
+					initial={{
+						opacity: 0,
+						x: -20,
+						alignItems: isFullHeight ? "center" : "flex-start",
+						maxWidth: isFullHeight ? "100%" : "auto",
+					}}
+					animate={{
+						opacity: 1,
+						x: 0,
+						alignItems: isFullHeight ? "center" : "flex-start",
+						maxWidth: isFullHeight ? "100%" : "auto",
+					}}
+					exit={{
+						opacity: 0,
+						x: 10,
+						alignItems: isFullHeight ? "center" : "flex-start",
+						maxWidth: isFullHeight ? "100%" : "auto",
+					}}
 					transition={{ duration: 0.4, ease: "easeInOut" }}
 				>
 					<h1 className="hero__heading">{heading}</h1>
@@ -30,6 +56,7 @@ const Hero = ({ heading, subheading, image, cta }: HeroProps) => {
 							{cta.label}
 						</Link>
 					)}
+					{children}
 				</motion.div>
 			</AnimatePresence>
 		</header>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./BookingWidget.scss";
+
 const BookingWidget: React.FC = () => {
 	return (
 		<div className="booking-widget-container">
