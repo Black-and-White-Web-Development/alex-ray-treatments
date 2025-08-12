@@ -8,6 +8,10 @@
     --header-height: max(40vw, 500px);
   }
 
+  &--full-height {
+    --header-height: 100vh;
+  }
+
 	position: relative;
 	height: var(--header-height);
   background-color: hsl(265 0% 14%);
@@ -21,6 +25,10 @@
     &--hero {
       --header-height: max(40vw, 600px);
     }   
+
+    &--full-height {
+      --header-height: 100vh;
+    }
   }
 
 	&__image,
@@ -53,6 +61,10 @@
 
     @include u.breakpoint(tablet) {
       max-width: 50%;
+    }
+
+    @include u.breakpoint-down(phone-landscape) {
+      padding-top: 120px;
     }
 	}
 
@@ -112,4 +124,11 @@
 			transition-duration: 800ms;
 		}
 	}
+}
+
+.hero--full-height .hero {
+   &__content {
+      align-items: center;
+      max-width: 100%;
+   } 
 }
