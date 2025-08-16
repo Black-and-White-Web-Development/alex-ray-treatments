@@ -1,6 +1,6 @@
 import TextWithImage from "@/components/TextWithImage";
 
-import portrait from "@/assets/alex-ray.webp";
+import portrait from "@/assets/alex-ray-working.webp";
 
 const Home = function () {
 	return (
