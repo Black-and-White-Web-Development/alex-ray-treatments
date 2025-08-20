@@ -68,7 +68,8 @@ p,
 pre,
 q,
 span,
-strong {
+strong,
+ul {
   @include fluid.typography(3, 4);
 
   &.small {
@@ -80,7 +81,7 @@ strong {
   }
 }
 
-p {
+p, ul {
   font-family: var(--serif);
   color: var(--text-2);
 }
