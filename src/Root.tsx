@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
 import BookingWidget from "@/components/BookingWidget";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
@@ -37,6 +38,22 @@ const heroContent: Record<string, HeroProps> = {
 		image: background,
 		children: <BookingWidget />,
 	},
+	"/accessibility-statement": {
+		heading: "Accessibility statement",
+		image: background,
+	},
+	"/cookie-policy": {
+		heading: "Cookie policy",
+		image: background,
+	},
+	"/privacy-policy": {
+		heading: "Privacy policy",
+		image: background,
+	},
+	"/terms-of-use": {
+		heading: "Terms of use",
+		image: background,
+	},
 };
 
 const App = () => {
@@ -56,6 +73,7 @@ const App = () => {
 				/>
 				<Outlet />
 			</main>
+			<Footer />
 		</>
 	);
 };

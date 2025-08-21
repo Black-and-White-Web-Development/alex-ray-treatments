@@ -1,0 +1,23 @@
+@use "@/scss/util/mixins/fluid-sizing" as fluid;
+
+.legal {
+	&__subheading {
+		margin-block-start: var(--space-6);
+
+		@include fluid.typography(5, 7);
+		font-weight: var(--fw-medium);
+	}
+
+	&__paragraph,
+	&__list {
+		margin-block-end: var(--space-3);
+	}
+
+	&__list {
+		padding-inline-start: 1rem;
+	}
+
+	&__list-item {
+		margin-block-end: var(--space-1);
+	}
+}
