@@ -1,0 +1,142 @@
+@use "@/scss/util/" as u;
+
+.footer {
+	padding-block: var(--space-9);
+	background-color: hsl(333 50% 21%);
+	color: white;
+
+	@include u.breakpoint(tablet) {
+		&__container {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			column-gap: var(--space-9);
+			justify-content: space-between;
+		}
+
+		&__content-wrapper {
+			justify-self: flex-end;
+		}
+	}
+
+	&__copyright-wrapper {
+		margin-block-end: u.rem(48);
+	}
+
+	&__logo {
+		width: 48px;
+		height: 48px;
+	}
+
+	&__copyright-heading {
+		margin-block-end: u.rem(8);
+		font-size: u.rem(20);
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: var(--cl-secondary);
+	}
+
+	&__copyright-text {
+		color: hsl(0, 0%, 80%);
+	}
+
+	&__content-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-6) var(--space-4);
+
+		@include u.breakpoint(phone-landscape) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--space-6) var(--space-9);
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	&__links-heading {
+		font-family: var(--sans-serif);
+		font-size: u.rem(16);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		color: hsl(0, 0%, 100%);
+	}
+
+	&__link {
+		position: relative;
+		max-width: fit-content;
+
+		font-family: var(--sans-serif);
+		font-weight: 400;
+		color: hsl(0, 0%, 90%);
+
+		transition-property: color;
+		transition-duration: 400ms;
+
+		&:hover,
+		&:hover .footer__social-icon {
+			color: white;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 100% 0 0 0;
+
+			height: 1px;
+
+			background-color: white;
+
+			transform: scaleX(0);
+
+			transition-property: transform;
+			transition-duration: 800ms;
+		}
+
+		&:hover::after {
+			transition-duration: 400ms;
+			transform: scaleX(1);
+		}
+
+		&--social {
+			display: flex;
+			align-items: center;
+			gap: var(--space-1);
+
+			&::after {
+				content: "⭢";
+				position: static;
+
+				height: auto;
+
+				background-color: transparent;
+
+				transform: translateX(0);
+				opacity: 0;
+
+				transition-property: opacity, transform;
+				transition-duration: 800ms;
+			}
+
+			&:hover::after {
+				opacity: 1;
+				transition-duration: 400ms;
+				transform: translateX(4px);
+			}
+		}
+	}
+
+	&__social-icon {
+		color: var(--text-2);
+		transition-property: color;
+		transition-duration: 400ms;
+	}
+
+	&__link-icon {
+		width: u.rem(24);
+		filter: invert(1);
+	}
+}
