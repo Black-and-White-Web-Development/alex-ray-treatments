@@ -3,14 +3,6 @@
 
 .hero {
 	--header-height: max(25vw, 300px);
-  
-  &--hero {
-    --header-height: max(40vw, 500px);
-  }
-
-  &--full-height {
-    --header-height: 100vh;
-  }
 
 	position: relative;
 	height: var(--header-height);
@@ -18,6 +10,14 @@
 
   transition-property: height;
   transition-duration: 800ms;
+
+  &--hero {
+    --header-height: max(40vw, 500px);
+  }
+
+  &--full-height {
+    --header-height: 100vh;
+  }
 
   @include u.breakpoint(tablet) {
     --header-height: max(25vw, 400px);
