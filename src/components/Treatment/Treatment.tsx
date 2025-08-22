@@ -52,6 +52,15 @@ const Treatment = ({ treatment }: TreatmentProps) => {
 					<dd className="treatment__details">{formatMoney(treatment.price)}</dd>
 				</div>
 			</dl>
+			{treatment.description && (
+				<div className="treatment__description">
+					{treatment.description.map(paragraph => (
+						<p key={paragraph} className="treatment__paragraph">
+							{paragraph}
+						</p>
+					))}
+				</div>
+			)}
 		</article>
 	);
 };

@@ -3,7 +3,7 @@
 		"id": 1,
 		"image": {
 			"url": "/images/back-massage.webp",
-			"alt": "Alex Ray performing a back massage, pressing firmly into the client's back while the client lies on a gray towel-covered massage table."
+			"alt": "Alex performing a back massage, pressing firmly into the client's back while the client lies on a gray towel-covered massage table."
 		},
 		"heading": "Body treatments",
 		"body": [
@@ -29,7 +29,7 @@
 		"id": 2,
 		"image": {
 			"url": "/images/foot-massage.webp",
-			"alt": "Alex Ray performing a foot massage, with hands gently manipulating the client's foot."
+			"alt": "Alex performing a foot massage, with hands gently manipulating the client's foot."
 		},
 		"heading": "Hands and feet",
 		"body": [
@@ -67,6 +67,90 @@
 			{ "id": 6, "name": "Eyelash & Eyebrow Tint", "duration": 30, "price": 23 },
 			{ "id": 7, "name": "Eyelash Tint & Eyebrow Shape", "duration": 30, "price": 26 },
 			{ "id": 8, "name": "Eyelash Tint & Eyebrow Shape and Tint", "duration": 30, "price": 30 }
+		]
+	},
+	{
+		"id": 4,
+		"image": {
+			"url": "/images/leg-wax.webp",
+			"alt": "Alex applying warm leg wax to a client using a professional waxing applicator tool."
+		},
+		"heading": "Waxing",
+		"body": [
+			"My waxing treatments are designed to leave your skin smooth, soft, and cared for, so you can feel confident and comfortable.",
+			"From precise brow shaping to full-body waxing, each treatment is tailored to your needs, whether it's everyday upkeep or special occasion preparation."
+		],
+		"treatments": [
+			{ "id": 0, "name": "Chin Wax", "duration": 5, "price": 9 },
+			{ "id": 1, "name": "Lip & Chin Wax", "duration": 15, "price": 15 },
+			{ "id": 2, "name": "Lip WAX", "duration": 10, "price": 8 },
+			{ "id": 3, "name": "Under Arm WAX", "duration": 10, "price": 12 },
+			{ "id": 4, "name": "Half Legs WAX", "duration": 20, "price": 23 },
+			{ "id": 5, "name": "Full Legs WAX", "duration": 30, "price": 30 },
+			{ "id": 6, "name": "Half Legs & Bikini WAX", "duration": 30, "price": 35 },
+			{ "id": 7, "name": "Full Legs & Bikini Wax", "duration": 45, "price": 40 },
+			{ "id": 8, "name": "Bikini Wax", "duration": 20, "price": 24 },
+			{ "id": 9, "name": "Hollywood Wax", "duration": 30, "price": 36 },
+			{ "id": 10, "name": "Back Wax", "duration": 25, "price": 35 },
+			{ "id": 11, "name": "Brazilian Wax", "duration": 30, "price": 32 },
+			{ "id": 12, "name": "Arm Wax", "duration": 15, "price": 25 },
+			{ "id": 13, "name": "Chest Wax", "duration": 25, "price": 32 },
+			{ "id": 14, "name": "Back & Chest Wax", "duration": 30, "price": 50 }
+		]
+	},
+	{
+		"id": 5,
+		"image": {
+			"url": "/images/facial.webp",
+			"alt": "Alex performing a facial treatment on a smiling client. The client wears a white flanel on her forehead."
+		},
+		"heading": "Facials",
+		"body": [
+			"From glow-boosting exfoliation to calming, nourishing treatments, my facials are designed to leave you looking radiant and feeling refreshed.",
+			"Whether you want to unwind with a relaxing massage or target specific skin concerns, each treatment is customised to you."
+		],
+		"treatments": [
+			{
+				"id": 0,
+				"name": "Face Massage",
+				"duration": 30,
+				"price": 35,
+				"description": [
+					"Relaxing face massage with vitamin oil boosts collagen, reduces fatigue, and increases circulation.",
+					"Finish with a cooling skin gym ice globe to leave you feeling fresh."
+				]
+			},
+			{
+				"id": 1,
+				"name": "Glycolic Facial Peel",
+				"duration": 30,
+				"price": 45,
+				"description": [
+					"This resurfacing facial combines glycolic acid, salicylic acid and pomegranate enzyme for a healthier, smoother and brighter complexion.",
+					"Perfect for anti-aging, as it improves pigmentation and reduces wrinkles and also ideal for treating acne prone skin and scaring."
+				]
+			},
+			{
+				"id": 2,
+				"name": "Relaxing Facial",
+				"duration": 50,
+				"price": 50,
+				"description": [
+					"This relaxing treatment is customised to your skin's needs.",
+					"Including a double cleanse, exfoliation, neck/shoulder and facial massage, mask, serum and moisturiser, with a hand/arm or scalp massage added on for complete relaxation."
+				]
+			},
+			{
+				"id": 3,
+				"name": "Microdermabrasion",
+				"duration": 45,
+				"price": 50,
+				"description": [
+					"This gentle facial is designed to give your skin a perfect glow!",
+					"The treatment uses a diamond-studded tip with suction to give a deep exfoliation that lifts away dead skin cells, leaving your skin brighter, softer and more plump, refining the pores as well as reducing fine lines and wrinkles.",
+					"Results are noticeable after one treatment, but a course of treatments is recommended and will enhance these results."
+				]
+			}
 		]
 	}
 ]
