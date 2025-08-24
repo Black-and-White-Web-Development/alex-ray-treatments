@@ -1,6 +1,11 @@
+@use "@/scss/util" as u;
 @use "@/scss/util/mixins/fluid-sizing" as fluid;
 
 .treatments-summary {
+  margin-block-end: 0;
+  padding-block: var(--space-9);
+  background-color: var(--background-accent-2);
+
 	&__heading {
 		margin-block-end: var(--space-5);
 	}
@@ -32,20 +37,29 @@
 	border-color: var(--border-1);
 	border-radius: var(--radius-4);
 
-	background-color: var(--background-2);
+	background-color: var(--background-0);
 
+  transition-property: box-shadow;
+  transition-duration: 2000ms;
+  
+  
 	&:hover {
+    box-shadow: var(--shadow-3);
+    transition-duration: 800ms;
+
 		& .summary__heading-container {
 			background-color: var(--grey-a11);
 		}
 		& .summary__heading {
 			transform: translateY(0);
+      transition-delay: 0;
 		}
 		& .summary__heading::after {
 			transform: scaleX(1);
 		}
 		& .summary__subheading {
 			opacity: 1;
+      transition-delay: 200ms;
 		}
 	}
 
@@ -84,10 +98,13 @@
 		text-wrap: balance;
 		color: white;
 
-		transform: translateY(35%);
-
-		transition-property: transform;
-		transition-duration: 400ms;
+    @include u.breakpoint(tablet) { 
+      transform: translateY(35%);
+      
+      transition-property: transform;
+      transition-duration: 400ms;
+      transition-delay: 200ms;
+    }
 	}
 	&__heading::after {
 		content: "";
@@ -97,10 +114,12 @@
 
 		background-color: white;
 
-		transform: scaleX(0);
+    @include u.breakpoint(tablet) {
+      transform: scaleX(0);
 
-		transition-property: transform;
-		transition-duration: 400ms;
+      transition-property: transform;
+      transition-duration: 400ms;
+    }
 	}
 
 	&__subheading {
@@ -108,10 +127,13 @@
 		font-family: var(--sans-serif);
 		color: white;
 
-		opacity: 0;
-
-		transition-property: opacity;
-		transition-duration: 800ms;
+    @include u.breakpoint(laptop) {
+      opacity: 0;
+  
+      transition-property: opacity;
+      transition-duration: 800ms;
+      transition-delay: 0;
+    }
 	}
 
 	&__image {
