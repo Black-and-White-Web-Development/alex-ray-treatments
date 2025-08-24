@@ -1,8 +1,12 @@
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import TextWithImage from "@/components/TextWithImage";
 
 import alexRayWorking from "@/assets/alex-ray.webp";
 
 const About = function () {
+	usePageTitle("About");
+
 	return (
 		<>
 			<TextWithImage

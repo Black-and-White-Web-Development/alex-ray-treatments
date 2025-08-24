@@ -1,6 +1,10 @@
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import "./legal.scss";
 
 const Accessibility = () => {
+	usePageTitle("Accessibility Statement");
+
 	return (
 		<section className="legal fb-col-wrapper">
 			<h2 className="legal__subheading">Our commitment to accessibility</h2>

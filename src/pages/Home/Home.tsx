@@ -1,6 +1,8 @@
 import { faQuoteLeft } from "@awesome.me/kit-d5b9232d46/icons/classic/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import TextWithImage from "@/components/TextWithImage";
 
 import type { Review as ReviewType } from "@/types/review.types";
@@ -17,14 +19,16 @@ const services = servicesData as ServiceType[];
 const reviews = reviewsData as ReviewType[];
 
 const Home = function () {
+	usePageTitle("");
+
 	return (
 		<>
 			<TextWithImage
 				position="right"
 				image={{ url: sign, alt: "Alex Ray" }}
-				heading="Welcome to Alex Ray Treatments"
+				heading="Welcome to Alex Ray Wellbeing"
 				text={[
-					"Tucked away in a quiet corner of West Sussex, Alex Ray Treatments offers a haven of calm, comfort, and expert care.",
+					"Tucked away in a quiet corner of West Sussex, Alex Ray Wellbeing offers a haven of calm, comfort, and expert care.",
 					"Alex has an attentive, personal approach and loves nothing better than watching her clients switch off from the world and truly relax during their appointments.",
 					"Alex is passionate about championing natural, cruelty-free products. She holds a Level 4 diploma in Beauty Therapy and Salon Management.",
 					"The salon is open six days a week, with flexible opening hours including some evenings. Alex also provides her specialist massage treatments to guests at The Pig Hotel near Arundel.",

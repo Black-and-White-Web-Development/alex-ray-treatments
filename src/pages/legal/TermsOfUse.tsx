@@ -1,6 +1,10 @@
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import "./legal.scss";
 
 const TermsOfUse = () => {
+	usePageTitle("Terms of Use");
+
 	return (
 		<section className="legal fb-col-wrapper">
 			<p className="legal__paragraph">
