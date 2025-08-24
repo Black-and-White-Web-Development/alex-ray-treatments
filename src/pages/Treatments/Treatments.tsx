@@ -1,3 +1,5 @@
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import Service from "@/components/Service";
 
 import type { Service as ServiceType } from "@/types/services.types";
@@ -10,6 +12,8 @@ import "./Treatments.scss";
 const services = servicesData as ServiceType[];
 
 const Treatments = function () {
+	usePageTitle("Treatments");
+
 	return (
 		<section className="treatments">
 			<ul className="treatments__list">

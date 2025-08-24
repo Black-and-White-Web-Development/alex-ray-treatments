@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
+import { ScrollToTop } from "./util/ScrollToTop";
+
 import background from "@/assets/fields.webp";
 
 interface HeroProps {
@@ -19,7 +21,7 @@ interface HeroProps {
 
 const heroContent: Record<string, HeroProps> = {
 	"/": {
-		heading: "Alex Ray Treatments",
+		heading: "Alex Ray Wellbeing",
 		subheading:
 			"Wellness and beauty treatments from a cosy boutique salon in the Chichester countryside.",
 		cta: { href: "/book", label: "Book now" },
@@ -39,19 +41,19 @@ const heroContent: Record<string, HeroProps> = {
 		children: <BookingWidget />,
 	},
 	"/accessibility-statement": {
-		heading: "Accessibility statement",
+		heading: "Accessibility Statement",
 		image: background,
 	},
 	"/cookie-policy": {
-		heading: "Cookie policy",
+		heading: "Cookie Policy",
 		image: background,
 	},
 	"/privacy-policy": {
-		heading: "Privacy policy",
+		heading: "Privacy Policy",
 		image: background,
 	},
 	"/terms-of-use": {
-		heading: "Terms of use",
+		heading: "Terms of Use",
 		image: background,
 	},
 };
@@ -62,6 +64,7 @@ const App = () => {
 
 	return (
 		<>
+			<ScrollToTop />
 			<Header />
 			<main>
 				<Hero

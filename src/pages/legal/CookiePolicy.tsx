@@ -1,6 +1,10 @@
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import "./legal.scss";
 
 const CookiePolicy = () => {
+	usePageTitle("Cookie Policy");
+
 	return (
 		<section className="legal fb-col-wrapper">
 			<h2 className="legal__subheading">What are cookies?</h2>

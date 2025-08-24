@@ -22,7 +22,7 @@ const Footer = function () {
 				<div className="footer__content-wrapper">
 					<div className="footer__links">
 						<h3 className="footer__links-heading">Site map</h3>
-						<NavLink to="/home" className="footer__link">
+						<NavLink to="/" className="footer__link">
 							Home
 						</NavLink>
 						<NavLink to="/about" className="footer__link">

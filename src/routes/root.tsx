@@ -5,7 +5,7 @@ import legalRoutes from "./legal";
 import type { RouteObject } from "react-router-dom";
 
 import About from "@/pages/About";
-import Contact from "@/pages/Contact";
+import Book from "@/pages/Book";
 import Home from "@/pages/Home";
 import Treatments from "@/pages/Treatments";
 import Root from "@/Root";
@@ -19,7 +19,7 @@ const routes: RouteObject[] = [
 			{ path: "", element: <Home /> },
 			{ path: "about", element: <About /> },
 			{ path: "treatments", element: <Treatments /> },
-			{ path: "book", element: <Contact /> },
+			{ path: "book", element: <Book /> },
 			legalRoutes,
 		],
 	},

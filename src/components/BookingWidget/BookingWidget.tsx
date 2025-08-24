@@ -1,8 +1,12 @@
 import React from "react";
 
+import { usePageTitle } from "@/hooks/usePageTitle";
+
 import "./BookingWidget.scss";
 
 const BookingWidget: React.FC = () => {
+	usePageTitle("Book a treatment");
+
 	return (
 		<div className="booking-widget-container">
 			<iframe
