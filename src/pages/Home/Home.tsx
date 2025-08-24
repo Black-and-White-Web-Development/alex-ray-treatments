@@ -1,14 +1,20 @@
+import { faQuoteLeft } from "@awesome.me/kit-d5b9232d46/icons/classic/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import TextWithImage from "@/components/TextWithImage";
 
+import type { Review as ReviewType } from "@/types/review.types";
 import type { Service as ServiceType } from "@/types/services.types";
 
 import sign from "@/assets/alex-ray-wellbeing-sign.webp";
+import reviewsData from "@/data/reviews.json" assert { type: "json" };
 import servicesData from "@/data/treatments.json" assert { type: "json" };
 import { strToKebabCase } from "@/util/strToKebabCase";
 
 import "./Home.scss";
 
 const services = servicesData as ServiceType[];
+const reviews = reviewsData as ReviewType[];
 
 const Home = function () {
 	return (
@@ -46,6 +52,22 @@ const Home = function () {
 									<p className="summary__body">{service.body[0]}</p>
 								</article>
 							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+			<section className="reviews fb-col-wrapper">
+				<h2 className="reviews__heading">What Alex's clients say</h2>
+				<ul className="reviews__list">
+					{reviews.map(review => (
+						<li key={review.id} className="reviews__list-item">
+							<article className="review">
+								<FontAwesomeIcon className="review__icon" icon={faQuoteLeft} />
+								<div className="review__content">
+									<p className="review__body">{review.body}</p>
+									<p className="review__author">{review.author}</p>
+								</div>
+							</article>
 						</li>
 					))}
 				</ul>
