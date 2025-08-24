@@ -1,14 +1,16 @@
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 import "./TextWithImage.scss";
 
 interface TextWithImageProps {
 	image: { url: string; alt: string };
 	text: string[];
 	heading?: string;
+	cta?: { href: string; label: string };
 	position?: "left" | "right";
 }
 
-const TextWithImage = ({ image, text, heading, position = "left" }: TextWithImageProps) => {
+const TextWithImage = ({ image, text, heading, cta, position = "left" }: TextWithImageProps) => {
 	return (
 		<section className="fb-col-wrapper">
 			<div
@@ -25,6 +27,11 @@ const TextWithImage = ({ image, text, heading, position = "left" }: TextWithImag
 							{paragraph}
 						</p>
 					))}
+					{cta && (
+						<Link to={cta.href} className="text-with-image__cta">
+							{cta.label}
+						</Link>
+					)}
 				</article>
 			</div>
 		</section>

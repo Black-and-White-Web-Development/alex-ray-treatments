@@ -91,6 +91,7 @@
 			background-color: white;
 
 			transform: scaleX(0);
+      transform-origin: 0%;
 
 			transition-property: transform;
 			transition-duration: 800ms;
@@ -130,7 +131,7 @@
 	}
 
 	&__social-icon {
-		color: var(--text-2);
+		color: hsl(333, 50%, 79%);
 		transition-property: color;
 		transition-duration: 400ms;
 	}
