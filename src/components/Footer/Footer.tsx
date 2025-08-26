@@ -1,6 +1,7 @@
 import { faFacebookF } from "@awesome.me/kit-d5b9232d46/icons/classic/brands";
 import { faGoogle } from "@awesome.me/kit-d5b9232d46/icons/classic/brands";
 import { faInstagram } from "@awesome.me/kit-d5b9232d46/icons/classic/brands";
+import { faArrowRight } from "@awesome.me/kit-d5b9232d46/icons/classic/light";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
@@ -60,6 +61,7 @@ const Footer = function () {
 						>
 							<FontAwesomeIcon className="footer__social-icon" icon={faGoogle} />
 							Google Maps
+							<FontAwesomeIcon className="footer__social-arrow" icon={faArrowRight} />
 						</a>
 						<a
 							href="https://www.instagram.com/alexraytreatments/"
@@ -69,6 +71,7 @@ const Footer = function () {
 						>
 							<FontAwesomeIcon className="footer__social-icon" icon={faInstagram} />
 							Instagram
+							<FontAwesomeIcon className="footer__social-arrow" icon={faArrowRight} />
 						</a>
 						<a
 							href="https://www.facebook.com/alexraytreatments/?locale=en_GB"
@@ -78,6 +81,7 @@ const Footer = function () {
 						>
 							<FontAwesomeIcon className="footer__social-icon" icon={faFacebookF} />
 							Facebook
+							<FontAwesomeIcon className="footer__social-arrow" icon={faArrowRight} />
 						</a>
 					</div>
 				</div>

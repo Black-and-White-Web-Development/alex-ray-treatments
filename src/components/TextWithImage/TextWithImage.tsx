@@ -1,3 +1,5 @@
+import { faArrowRight } from "@awesome.me/kit-d5b9232d46/icons/classic/light";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import "./TextWithImage.scss";
@@ -30,6 +32,7 @@ const TextWithImage = ({ image, text, heading, cta, position = "left" }: TextWit
 					{cta && (
 						<Link to={cta.href} className="text-with-image__cta">
 							{cta.label}
+							<FontAwesomeIcon className="text-with-image__cta-icon" icon={faArrowRight} />
 						</Link>
 					)}
 				</article>

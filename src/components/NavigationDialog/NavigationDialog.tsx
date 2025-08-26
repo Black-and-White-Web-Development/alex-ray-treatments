@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+import { faBars, faXmark } from "@awesome.me/kit-d5b9232d46/icons/classic/light";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dialog } from "radix-ui";
 import { useLocation } from "react-router-dom";
 
@@ -24,7 +25,7 @@ const NavigationDialog = function () {
 						className="nav-dialog__action nav-dialog__action--trigger"
 						aria-label="Open navigation menu"
 					>
-						<HamburgerMenuIcon className="nav-dialog__icon" />
+						<FontAwesomeIcon className="nav-dialog__icon" icon={faBars} />
 					</button>
 				</Dialog.Trigger>
 				<Dialog.Portal>
@@ -37,7 +38,7 @@ const NavigationDialog = function () {
 									className="nav-dialog__action nav-dialog__action--close"
 									aria-label="Close navigation menu"
 								>
-									<Cross1Icon className="nav-dialog__icon" />
+									<FontAwesomeIcon className="nav-dialog__icon" icon={faXmark} />
 								</button>
 							</Dialog.Close>
 						</header>
