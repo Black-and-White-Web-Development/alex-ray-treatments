@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { faArrowRight } from "@awesome.me/kit-d5b9232d46/icons/classic/light";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -54,6 +56,7 @@ const Hero = ({ heading, subheading, image, cta, children }: HeroProps) => {
 					{cta && (
 						<Link className="hero__cta" to={cta.href}>
 							{cta.label}
+							<FontAwesomeIcon className="hero__cta-icon" icon={faArrowRight} />
 						</Link>
 					)}
 					{children}

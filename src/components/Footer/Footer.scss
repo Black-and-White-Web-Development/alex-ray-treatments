@@ -124,7 +124,7 @@
 				transition-duration: 800ms;
 			}
 
-			&:hover::after {
+			&:hover .footer__social-arrow {
 				opacity: 1;
 				transition-duration: 400ms;
 				transform: translateX(4px);
@@ -132,14 +132,17 @@
 		}
 	}
 
+  &__social-arrow {
+    transform: translateX(0);
+    opacity: 0;
+
+    transition-property: opacity, transform;
+    transition-duration: 800ms;   
+  }
+
 	&__social-icon {
 		color: hsl(333, 50%, 79%);
 		transition-property: color;
 		transition-duration: 400ms;
-	}
-
-	&__link-icon {
-		width: u.rem(24);
-		filter: invert(1);
 	}
 }

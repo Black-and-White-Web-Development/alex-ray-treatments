@@ -106,24 +106,22 @@
 		transition-property: color, background-color;
 		transition-duration: 1200ms;
 
-		&::after {
-			content: "⭢";
-			width: 20px;
-			transition-property: transform;
-			transition-duration: 1600ms;
-		}
-
 		&:hover {
 			color: black;
 			background-color: white;
 			transition-duration: 400ms;
 		}
 
-		&:hover::after {
+		&:hover .hero__cta-icon {
 			transform: translateX(8px);
 			transition-duration: 800ms;
 		}
 	}
+
+  &__cta-icon {
+    transition-property: transform;
+    transition-duration: 1600ms;
+  }
 }
 
 .hero--full-height .hero {
