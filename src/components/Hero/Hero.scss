@@ -6,7 +6,6 @@
 
 	position: relative;
 	height: var(--header-height);
-  background-color: hsl(265 0% 14%);
 
   transition-property: height;
   transition-duration: 800ms;
@@ -33,8 +32,6 @@
 
 	&__image,
 	&__content {
-		position: absolute;
-		inset: 0;
 		width: 100%;
 		height: var(--header-height);
 
@@ -43,12 +40,18 @@
 	}
 
 	&__image {
+		position: absolute;
+		inset: 0;
+    z-index: -1;
+
 		grid-column: 1 / -1 !important;
 		opacity: 0.65;
 		object-fit: cover;
 	}
 
 	&__content {
+    z-index: 0;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
