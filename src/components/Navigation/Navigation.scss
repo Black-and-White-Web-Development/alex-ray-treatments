@@ -76,6 +76,7 @@
       transform: scaleX(0);
       
       transition-property: transform;
+      transform-origin: left;
       transition-duration: 800ms;
     }
     

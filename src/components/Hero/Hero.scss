@@ -10,6 +10,14 @@
   transition-property: height;
   transition-duration: 800ms;
 
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background-color: hsl(0 0% 0% / 0.2);
+  }
+
   &--hero {
     --header-height: max(40vw, 500px);
   }
@@ -45,7 +53,7 @@
     z-index: -1;
 
 		grid-column: 1 / -1 !important;
-		opacity: 0.65;
+		// opacity: 0.65;
 		object-fit: cover;
 	}
 
