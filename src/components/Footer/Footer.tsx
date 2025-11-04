@@ -64,7 +64,7 @@ const Footer = function () {
 							<FontAwesomeIcon className="footer__social-arrow" icon={faArrowRight} />
 						</a>
 						<a
-							href="https://www.instagram.com/alexraytreatments/"
+							href="https://www.instagram.com/alexraywellbeing/"
 							rel="noopener noreferrer"
 							target="_blank"
 							className="footer__link footer__link--social"
@@ -74,7 +74,7 @@ const Footer = function () {
 							<FontAwesomeIcon className="footer__social-arrow" icon={faArrowRight} />
 						</a>
 						<a
-							href="https://www.facebook.com/alexraytreatments/?locale=en_GB"
+							href="https://www.facebook.com/alexraywellbeing/"
 							rel="noopener noreferrer"
 							target="_blank"
 							className="footer__link footer__link--social"
