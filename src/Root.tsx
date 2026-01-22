@@ -61,12 +61,13 @@ const heroContent: Record<string, HeroProps> = {
 const App = () => {
 	const location = useLocation();
 	const content = heroContent[location.pathname] || heroContent["/"];
+  const slug = location.pathname.replace("/", "") || "home";
 
 	return (
 		<>
 			<ScrollToTop />
 			<Header />
-			<main>
+			<main id={slug}>
 				<Hero
 					heading={content.heading}
 					subheading={content.subheading}

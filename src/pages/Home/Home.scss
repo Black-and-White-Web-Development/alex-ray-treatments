@@ -1,6 +1,12 @@
 @use "@/scss/util" as u;
 @use "@/scss/util/mixins/fluid-sizing" as fluid;
 
+#home {
+  & .text-with-image__image {
+    object-position: 50% 70%;
+  }
+}
+
 .treatments-summary {
   margin-block-end: 0;
   padding-block: var(--space-9);
