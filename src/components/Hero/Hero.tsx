@@ -11,18 +11,18 @@ interface HeroProps {
 	heading: string;
 	subheading?: string;
 	image: string;
-	cta?: { href: string; label: string };
+	ctas?: { href: string; label: string }[];
 	children?: ReactNode;
 }
 
-const Hero = ({ heading, subheading, image, cta, children }: HeroProps) => {
+const Hero = ({ heading, subheading, image, ctas, children }: HeroProps) => {
 	const isFullHeight = !!children;
 
 	return (
 		<header
 			className={clsx("hero fb-col-wrapper", {
-				"hero--hero": cta,
-				"hero--banner": !cta,
+				"hero--hero": ctas,
+				"hero--banner": !ctas,
 				"hero--full-height": isFullHeight,
 			})}
 		>
@@ -53,11 +53,15 @@ const Hero = ({ heading, subheading, image, cta, children }: HeroProps) => {
 				>
 					<h1 className="hero__heading">{heading}</h1>
 					{subheading && <p className="hero__subheading">{subheading}</p>}
-					{cta && (
-						<Link className="hero__cta" to={cta.href}>
-							{cta.label}
-							<FontAwesomeIcon className="hero__cta-icon" icon={faArrowRight} />
-						</Link>
+					{ctas && (
+						<div className="hero__ctas">
+							{ctas.map(cta => (
+								<Link className="hero__cta" key={cta.href} to={cta.href}>
+									{cta.label}
+									<FontAwesomeIcon className="hero__cta-icon" icon={faArrowRight} />
+								</Link>
+							))}
+						</div>
 					)}
 					{children}
 				</motion.div>

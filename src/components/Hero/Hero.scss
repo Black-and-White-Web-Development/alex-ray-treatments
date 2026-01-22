@@ -95,6 +95,12 @@
     text-wrap: balance;
 	}
 
+  &__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
 	&__cta {
 		display: flex;
 		align-items: center;
@@ -116,7 +122,7 @@
 
 		transition-property: color, background-color;
 		transition-duration: 1200ms;
-
+    
 		&:hover {
 			color: black;
 			background-color: white;

@@ -15,7 +15,7 @@ interface HeroProps {
 	heading: string;
 	subheading?: string;
 	image: string;
-	cta?: { href: string; label: string };
+	ctas?: { href: string; label: string }[];
 	children?: ReactNode;
 }
 
@@ -24,7 +24,10 @@ const heroContent: Record<string, HeroProps> = {
 		heading: "Alex Ray Wellbeing",
 		subheading:
 			"Wellness and beauty treatments from a cosy boutique salon in the Chichester countryside.",
-		cta: { href: "/book", label: "Book now" },
+		ctas: [
+			{ href: "/book", label: "Book now" },
+			{ href: "/vouchers", label: "Purchase gift voucher" },
+		],
 		image: background,
 	},
 	"/about": {
@@ -38,7 +41,12 @@ const heroContent: Record<string, HeroProps> = {
 	"/book": {
 		heading: "Book your treatment",
 		image: background,
-		children: <BookingWidget />,
+		children: <BookingWidget src="https://bookings.gettimely.com/alexraytreatments1/bb/book" />,
+	},
+	"/vouchers": {
+		heading: "Gift vouchers",
+		image: background,
+		children: <BookingWidget src="https://bookings.gettimely.com/alexraytreatments1/bb/purchase" />,
 	},
 	"/accessibility-statement": {
 		heading: "Accessibility Statement",
@@ -71,7 +79,7 @@ const App = () => {
 				<Hero
 					heading={content.heading}
 					subheading={content.subheading}
-					cta={content.cta}
+					ctas={content.ctas}
 					image={content.image}
 					children={content.children}
 				/>

@@ -15,6 +15,7 @@ const Navigation = function () {
 				<NavItem to="/" name="Home" />
 				<NavItem to="/about" name="About" />
 				<NavItem to="/treatments" name="Treatments" />
+				<NavItem to="/vouchers" name="Gift vouchers" />
 				<NavItem isCta={true} to="/book" name="Book a treament" />
 			</NavigationMenu.List>
 		</NavigationMenu.Root>

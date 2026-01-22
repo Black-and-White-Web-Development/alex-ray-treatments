@@ -1,5 +1,5 @@
-const Contact = function () {
+const Book = function () {
 	return <></>;
 };
 
-export default Contact;
+export default Book;

@@ -4,13 +4,17 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 import "./BookingWidget.scss";
 
-const BookingWidget: React.FC = () => {
+interface BookingWidgetProps {
+	src: string;
+}
+
+const BookingWidget: React.FC<BookingWidgetProps> = ({ src }) => {
 	usePageTitle("Book a treatment");
 
 	return (
 		<div className="booking-widget-container">
 			<iframe
-				src="https://bookings.gettimely.com/alexraytreatments1/bb/book"
+				src={src}
 				scrolling="no"
 				id="timelyWidget"
 				style={{ width: "480px", height: "600px", border: "none" }}
