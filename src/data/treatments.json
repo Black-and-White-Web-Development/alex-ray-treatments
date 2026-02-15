@@ -38,13 +38,16 @@
 			"I also offer reflexology sessions, using this ancient process to tap into your body's energy and restore balance. Whether it's regular upkeep or a special occasion treatment, your hands and feet leave our salon looking and feeling their best."
 		],
 		"treatments": [
-			{ "id": 2, "name": "Deluxe Pedicure (included gel polish)", "duration": 60, "price": 45 },
-			{ "id": 4, "name": "Express Pedicure", "duration": 30, "price": 35 },
+			{ "id": 2, "name": "Deluxe Pedicure (included gel polish)", "duration": 60, "price": 50 },
+			{ "id": 4, "name": "Express Pedicure", "duration": 30, "price": 40 },
 			{ "id": 5, "name": "File & Paint", "duration": 30, "price": 25 },
 			{ "id": 6, "name": "Cut & File", "duration": 30, "price": 20 },
 			{ "id": 7, "name": "Reflexology, Feet Only", "duration": 70, "price": 55 },
 			{ "id": 8, "name": "Reflexology, Hands Only", "duration": 45, "price": 35 },
-			{ "id": 9, "name": "Reflexology, Hands & Feet", "duration": 90, "price": 70 }
+			{ "id": 9, "name": "Reflexology, Hands & Feet", "duration": 90, "price": 70 },
+			{ "id": 10, "name": "Deluxe Manicure", "duration": 60, "price": 50 },
+			{ "id": 11, "name": "Express manicure", "duration": 30, "price": 35 },
+			{ "id": 12, "name": "Gel removal", "duration": 15, "price": 10 }
 		]
 	},
 	{
@@ -59,13 +62,13 @@
 			"It's ideal if you want to feel more polished with less makeup, and every treatment is tailored to your features, so the result feels effortless and flattering."
 		],
 		"treatments": [
-			{ "id": 1, "name": "Eyebrow Shape", "duration": 15, "price": 14 },
+			{ "id": 1, "name": "Eyebrow Shape", "duration": 15, "price": 15 },
 			{ "id": 2, "name": "Eyebrow Tint", "duration": 15, "price": 14 },
-			{ "id": 3, "name": "Eyebrow Shape & Tint", "duration": 30, "price": 23 },
-			{ "id": 4, "name": "Eyelash Lift (includes tint)", "duration": 50, "price": 40 },
-			{ "id": 5, "name": "Eyelash Tint", "duration": 30, "price": 18 },
-			{ "id": 6, "name": "Eyelash & Eyebrow Tint", "duration": 30, "price": 23 },
-			{ "id": 7, "name": "Eyelash Tint & Eyebrow Shape", "duration": 30, "price": 26 },
+			{ "id": 3, "name": "Eyebrow Shape & Tint", "duration": 30, "price": 24 },
+			{ "id": 4, "name": "Eyelash Lift (includes tint)", "duration": 50, "price": 45 },
+			{ "id": 5, "name": "Eyelash Tint", "duration": 30, "price": 20 },
+			{ "id": 6, "name": "Eyelash & Eyebrow Tint", "duration": 30, "price": 24 },
+			{ "id": 7, "name": "Eyelash Tint & Eyebrow Shape", "duration": 30, "price": 27 },
 			{ "id": 8, "name": "Eyelash Tint & Eyebrow Shape and Tint", "duration": 30, "price": 30 }
 		]
 	},
@@ -149,6 +152,15 @@
 					"This gentle facial is designed to give your skin a perfect glow!",
 					"The treatment uses a diamond-studded tip with suction to give a deep exfoliation that lifts away dead skin cells, leaving your skin brighter, softer and more plump, refining the pores as well as reducing fine lines and wrinkles.",
 					"Results are noticeable after one treatment, but a course of treatments is recommended and will enhance these results."
+				]
+			},
+			{
+				"id": 4,
+				"name": "Dermaplaning",
+				"duration": 30,
+				"price": 70,
+				"description": [
+					"Dermaplaning in an effective treatment that uses a sterile surgical scalpel to remove fine hairs and excess skin on the face. Leaving the face smooth and radiant."
 				]
 			}
 		]
