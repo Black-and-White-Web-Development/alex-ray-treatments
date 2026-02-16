@@ -7,6 +7,40 @@
   }
 }
 
+.offer {
+  display: none;
+
+  flex-direction: column;
+  gap: var(--space-1);
+
+  margin-block-start: var(--space-9);
+  padding: var(--space-5) var(--space-6);
+  
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--solid-accent-1);
+  border-radius: var(--radius-3);
+  background-color: var(--background-0);
+
+  &__heading {
+    @include fluid.typography(6, 7);
+    margin-block-end: var(--space-4);
+  }
+
+  &__cta {
+    background-color: var(--text-accent-2);
+    color: var(--background-0);
+
+    &:hover {
+      background-color: var(--solid-accent-1);
+    }
+  }
+
+  &--is-active {
+    display: flex;
+  }
+}
+
 .treatments-summary {
   margin-block-end: 0;
   padding-block: var(--space-9);
