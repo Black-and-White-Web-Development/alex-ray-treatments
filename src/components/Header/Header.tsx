@@ -15,9 +15,17 @@ const Header = function () {
 		<header className="header fb-col-wrapper">
 			<div className="header__content">
 				<Link to="/">
-					<img className="header__logo" src={logo} alt="" width="48" height="48" />
+					<img
+						className="header__logo"
+						src={logo}
+						alt="Alex Ray Wellbeing Logo"
+						width="48"
+						height="48"
+					/>
 				</Link>
-				{isMobile ? <NavigationDialog /> : <Navigation />}
+				{isMobile ?
+					<NavigationDialog />
+				:	<Navigation />}
 			</div>
 		</header>
 	);

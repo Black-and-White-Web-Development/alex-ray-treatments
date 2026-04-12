@@ -58,11 +58,17 @@ const Home = function () {
 				<ul className="treatments-summary__list">
 					{services.map(service => (
 						<li key={service.id} className="treatments-summary__list-item">
-							<a className="summary__link" href={`/treatments#${strToKebabCase(service.heading)}`}>
+							<a
+								className="summary__link"
+								href={`/treatments#${strToKebabCase(service.heading)}`}
+								aria-labelledby={strToKebabCase(service.heading)}
+							>
 								<article className="summary">
 									<header className="summary__header">
 										<div className="summary__heading-container">
-											<h3 className="summary__heading">{service.heading}</h3>
+											<h3 id={strToKebabCase(service.heading)} className="summary__heading">
+												{service.heading}
+											</h3>
 											<p className="summary__subheading">View treatments ⭢</p>
 										</div>
 										<img
