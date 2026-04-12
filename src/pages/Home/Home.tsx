@@ -10,8 +10,8 @@ import type { Review as ReviewType } from "@/types/review.types";
 import type { Service as ServiceType } from "@/types/services.types";
 
 import sign from "@/assets/alex-ray-wellbeing-sign.webp";
-import reviewsData from "@/data/reviews.json" assert { type: "json" };
-import servicesData from "@/data/treatments.json" assert { type: "json" };
+import reviewsData from "@/data/reviews.json" with { type: "json" };
+import servicesData from "@/data/treatments.json" with { type: "json" };
 import { strToKebabCase } from "@/util/strToKebabCase";
 
 import "./Home.scss";
@@ -24,8 +24,8 @@ const Home = function () {
 
 	return (
 		<>
-			<aside className="fb-col-wrapper">
-				<article className="offer offer--is-active">
+			<aside className="fb-col-wrapper" aria-hidden="true">
+				<article className="offer offer">
 					<h2 className="offer__heading">February Offer</h2>
 					<p className="offer__description">
 						60-minute deep tissue full-body massage for £50.00. Usually £60.00 for 50 minutes.
